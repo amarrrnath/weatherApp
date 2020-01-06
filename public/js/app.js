@@ -9,7 +9,7 @@ weatherForm.addEventListener('submit', (e) => {
     const location = search.value;
     messageOne.textContent = "Loading...";
     messageTwo.textContent = '';
-    fetch('http://localhost:3000/weather?address=' + location).then((response) => {
+    fetch('http://amarrrnath-weather-application.herokuapp.com/weather?address=' + location).then((response) => {
         response.json().then((forecast) => {
             if(forecast.error) {
                 messageOne.textContent = forecast.error;
